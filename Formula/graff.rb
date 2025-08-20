@@ -1,20 +1,20 @@
 class Graff < Formula
   desc "Fast, deterministic Rust CLI for converting CSV data into beautiful PNG/SVG/PDF charts"
   homepage "https://github.com/umi-labs/graff"
-  version "1.0.2"
+  version "1.0.3"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/umi-labs/graff/releases/download/v1.0.2/graff-aarch64-apple-darwin.tar.xz"
-      sha256 "a2809c3516769ea64a11c4a2c6413fb76e5df423e8cb9a0dc074c483102ffecd"
+      url "https://github.com/umi-labs/graff/releases/download/v1.0.3/graff-aarch64-apple-darwin.tar.xz"
+      sha256 "1720372f38afe459d12a1be326f5623cbf0e5a3c48c0df9b180871c0ecc72f34"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/umi-labs/graff/releases/download/v1.0.2/graff-x86_64-apple-darwin.tar.xz"
-      sha256 "bf0d1c4e0c351381480324ab63fbfd609504784d98c386943255241819900bca"
+      url "https://github.com/umi-labs/graff/releases/download/v1.0.3/graff-x86_64-apple-darwin.tar.xz"
+      sha256 "4f933a43af0951937298be4195891be8c0e195c4050214981efdf2481407b7d6"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/umi-labs/graff/releases/download/v1.0.2/graff-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "f21c3bc351f8282b76963013fc372238e6aa81f86f83f91173e71338e3a8c38f"
+    url "https://github.com/umi-labs/graff/releases/download/v1.0.3/graff-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "aa09fb0958ce8d0e8014ad6c2cf54c82f89321b640771663825efed224d2d63f"
   end
   license "MIT"
 
