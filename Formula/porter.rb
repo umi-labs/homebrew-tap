@@ -1,25 +1,25 @@
 class Porter < Formula
   desc "Porter is a high-performance, Rust-based CLI tool for migrating structured content between different systems. It supports complex nested data structures, parallel processing, and provides an intuitive interactive interface for data transformation."
   homepage "https://github.com/umi-labs/porter"
-  version "1.0.12"
+  version "1.0.18"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/umi-labs/porter/releases/download/v1.0.12/porter-aarch64-apple-darwin.tar.xz"
-      sha256 "186b7997f38042807b434a83f24a27b1d0aa40e15a85f3025dff3217ec0c098c"
+      url "https://github.com/umi-labs/porter/releases/download/v1.0.18/porter-aarch64-apple-darwin.tar.xz"
+      sha256 "a7030d9b99cfb47b625ed2273c716e5fb3cdeb6d40b50be137ca0b7cacb738e8"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/umi-labs/porter/releases/download/v1.0.12/porter-x86_64-apple-darwin.tar.xz"
-      sha256 "6fff35b8fe8b6140a8d91968f47e1713d4efffa7328a5f99789991f666e9a066"
+      url "https://github.com/umi-labs/porter/releases/download/v1.0.18/porter-x86_64-apple-darwin.tar.xz"
+      sha256 "06d11f0615b9040bda03c2149cafe27a9131bb4a1e1501060800f73f24d9b6fc"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/umi-labs/porter/releases/download/v1.0.12/porter-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "05cae7acc5a4caad240117281c8a9b3b17ea81783484c3217b232a546079020a"
+      url "https://github.com/umi-labs/porter/releases/download/v1.0.18/porter-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "834e7aca9c55a1c470ce51d36d9b6d8e6dcc0b452a68e0897d242bf2caf6c6ac"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/umi-labs/porter/releases/download/v1.0.12/porter-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "22fabc5306ee6f730e96980224f77f99e6996dfeec3276c22182191d9b7a1c30"
+      url "https://github.com/umi-labs/porter/releases/download/v1.0.18/porter-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "1c7d618993fe614b64b92a0b2534b487be4578e0d9642012db677a5b2c35a9d4"
     end
   end
   license "MIT"
