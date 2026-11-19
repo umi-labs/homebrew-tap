@@ -1,25 +1,25 @@
 class Porter < Formula
-  desc "Porter is a high-performance, Rust-based CLI tool for migrating structured content between different systems. It supports complex nested data structures, parallel processing, and provides an intuitive interactive interface for data transformation."
+  desc "Porter is a CLI for migrating content between CMS platforms."
   homepage "https://github.com/umi-labs/porter"
-  version "1.0.46"
+  version "2.0.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/umi-labs/porter/releases/download/v1.0.46/porter-aarch64-apple-darwin.tar.xz"
-      sha256 "2e09b9b84e5f4d7008b888edc18156cad73925d4cdbbbb15990926b2991bd6c1"
+      url "https://github.com/umi-labs/porter/releases/download/v2.0.0/porter-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "c2b04544b4c1125e11f6924b9592b845143d5caa110051faa3a9acb0b963ffb9"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/umi-labs/porter/releases/download/v1.0.46/porter-x86_64-apple-darwin.tar.xz"
-      sha256 "cf8e0d6e0378881d66accdce62f686499af1c316c83dcd7d86b3b2764a86d6ad"
+      url "https://github.com/umi-labs/porter/releases/download/v2.0.0/porter-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "8e9392fe81feda9f8a2773a84bbf1f62f06974ac7ef2fb70e366a2bcad84841d"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/umi-labs/porter/releases/download/v1.0.46/porter-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "c2b50c422ae6da4ee99ff72d07612bba7022f54b67e734b9f882f019f28d0ed5"
+      url "https://github.com/umi-labs/porter/releases/download/v2.0.0/porter-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "7f77e651cdeab24573cd22d09224ba7f2cc75462d3634ca2f9588270789f33e9"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/umi-labs/porter/releases/download/v1.0.46/porter-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "52c69951e60b94192c149c1b4483cda4c1e437e00a8f0561dd81a0b36352cf93"
+      url "https://github.com/umi-labs/porter/releases/download/v2.0.0/porter-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "9887d555b809f530d4081cebb9c72e292c79fc16c79fa6c4516872ad37741714"
     end
   end
   license "MIT"
@@ -48,10 +48,18 @@ class Porter < Formula
   end
 
   def install
-    bin.install "porter" if OS.mac? && Hardware::CPU.arm?
-    bin.install "porter" if OS.mac? && Hardware::CPU.intel?
-    bin.install "porter" if OS.linux? && Hardware::CPU.arm?
-    bin.install "porter" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "porter"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "porter"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "porter"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "porter"
+    end
 
     install_binary_aliases!
 
