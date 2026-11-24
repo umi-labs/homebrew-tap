@@ -1,9 +1,9 @@
 cask "porter-desktop" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "2.0.0"
-  sha256 arm:   "8fe318b548bd8fbc0a484f5f28edb715683807ae38ce8fa886c3a5689a98b3b5",
-         intel: "e083e86dbef46112d4000f7b4b3efccc85946390d81b8877d0675c27d670e351"
+  version "2.1.0"
+  sha256 arm:   "24f5dc2082a245fdba25f47f634fcd81a438d0ef491fb57d85cee33183544675",
+         intel: "493cf4ab95a2c8c9fa6170a1dbc706d7467d98c782e1290d4478f33e6de53587"
 
   url "https://github.com/umi-labs/porter/releases/download/v#{version}/Porter_#{version}_#{arch}.dmg"
   name "Porter"
