@@ -1,25 +1,25 @@
 class Porter < Formula
   desc "Porter is a CLI for migrating content between CMS platforms."
   homepage "https://github.com/umi-labs/porter"
-  version "2.0.0"
+  version "2.1.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/umi-labs/porter/releases/download/v2.0.0/porter-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "c2b04544b4c1125e11f6924b9592b845143d5caa110051faa3a9acb0b963ffb9"
+      url "https://github.com/umi-labs/porter/releases/download/v2.1.0/porter-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "73eba55fc76a55715db99b286751e8c9a182228f1444f5a80a93605313030d20"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/umi-labs/porter/releases/download/v2.0.0/porter-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "8e9392fe81feda9f8a2773a84bbf1f62f06974ac7ef2fb70e366a2bcad84841d"
+      url "https://github.com/umi-labs/porter/releases/download/v2.1.0/porter-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "19bd0f534cf663904b6e4b105293aa7e7c09a22b4189bbdab221cc44ddd4a3c0"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/umi-labs/porter/releases/download/v2.0.0/porter-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "7f77e651cdeab24573cd22d09224ba7f2cc75462d3634ca2f9588270789f33e9"
+      url "https://github.com/umi-labs/porter/releases/download/v2.1.0/porter-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "cc182c3da96e11c2b54a1942a9b6bbb64c277f4d6c3ca23520307bf108a3bc06"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/umi-labs/porter/releases/download/v2.0.0/porter-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "9887d555b809f530d4081cebb9c72e292c79fc16c79fa6c4516872ad37741714"
+      url "https://github.com/umi-labs/porter/releases/download/v2.1.0/porter-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "3e33e0e2c31681b991d6a06bcdffbfe5f1de0bc14d893ffd012f5da3bd7ddd4f"
     end
   end
   license "MIT"
